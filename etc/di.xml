@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * ViraXpress - https://www.viraxpress.com
+ *
+ * LICENSE AGREEMENT
+ *
+ * This file is part of the ViraXpress package and is licensed under the ViraXpress license agreement.
+ * You can view the full license at:
+ * https://www.viraxpress.com/license
+ *
+ * By utilizing this file, you agree to comply with the terms outlined in the ViraXpress license.
+ *
+ * DISCLAIMER
+ *
+ * Modifications to this file are discouraged to ensure seamless upgrades and compatibility with future releases.
+ *
+ * @category    ViraXpress
+ * @package     ViraXpress_Catalog
+ * @author      ViraXpress
+ * @copyright   © 2024 ViraXpress (https://www.viraxpress.com/)
+ * @license     https://www.viraxpress.com/license
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\CustomerData\CompareProducts" type="ViraXpress\Catalog\CustomerData\CompareProducts" />
+    <preference for="Magento\Catalog\Block\Product\View\Options\Type\Select\Multiple" type="ViraXpress\Catalog\Block\Product\View\Options\Type\Select\Multiple" />
+    <preference for="Magento\Catalog\Block\Product\View\Options\Type\Date" type="ViraXpress\Catalog\Block\Product\View\Options\Type\Date" />
+    <preference for="Magento\Catalog\Block\Product\View\Gallery" type="ViraXpress\Catalog\Block\Product\View\Gallery" />
+    <preference for="Magento\Catalog\Model\Product\Gallery\Processor" type="ViraXpress\Catalog\Model\Product\Gallery\Processor" />
+    <preference for="Magento\Catalog\Block\Product\ProductList\Toolbar" type="ViraXpress\Catalog\Block\Product\ProductList\Toolbar" />
+</config>
