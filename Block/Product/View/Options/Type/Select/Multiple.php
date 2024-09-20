@@ -69,7 +69,7 @@ class Multiple extends \Magento\Catalog\Block\Product\View\Options\Type\Select\M
         }
         $extraParams .= $require;
         if ($enableViraxpress) {
-            $extraParams .= ' hx-on:change="changeCustomizableOption(event)"';
+            $extraParams .= ' x-on:change="changeCustomizableOption(event)"';
         } else {
             if (!$this->getSkipJsReloadPrice()) {
                 $extraParams .= ' onchange="opConfig.reloadPrice()"';
