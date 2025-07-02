@@ -94,6 +94,7 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
     /**
      * @var bool $_paramsMemorizeAllowed
      * @deprecated 103.0.1
+     * @see Updated deprecation doc annotations
      */
     protected $_paramsMemorizeAllowed = true;
 
@@ -108,8 +109,9 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
     protected $_catalogConfig;
 
     /**
-     * @var Session
+     * @var \Magento\Catalog\Model\Session
      * @deprecated 103.0.1
+     * @see Updated deprecation doc annotations
      */
     protected $catalogSession;
 
@@ -156,10 +158,10 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
      * @param EncoderInterface $urlEncoder
      * @param ProductList $productListHelper
      * @param PostHelper $postDataHelper
+     * @param ToolbarMemorizer $toolbarMemorizer
+     * @param HttpContext $httpContext
+     * @param FormKey $formKey
      * @param array $data
-     * @param ToolbarMemorizer|null $toolbarMemorizer
-     * @param HttpContext|null $httpContext
-     * @param FormKey|null $formKey
      *
      * @SuppressWarnings(PHPMD.ExcessiveParameterList)
      */
@@ -171,10 +173,10 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
         EncoderInterface $urlEncoder,
         ProductList $productListHelper,
         PostHelper $postDataHelper,
-        array $data = [],
-        ToolbarMemorizer $toolbarMemorizer = null,
-        HttpContext $httpContext = null,
-        FormKey $formKey = null
+        ToolbarMemorizer $toolbarMemorizer,
+        HttpContext $httpContext,
+        FormKey $formKey,
+        array $data = []
     ) {
         parent::__construct($context, $catalogSession, $catalogConfig, $toolbarModel, $urlEncoder, $productListHelper, $postDataHelper);
         $this->toolbarMemorizer = $toolbarMemorizer ?: ObjectManager::getInstance()->get(

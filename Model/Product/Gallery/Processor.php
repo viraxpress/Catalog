@@ -109,7 +109,7 @@ class Processor extends \Magento\Catalog\Model\Product\Gallery\Processor
         Config $mediaConfig,
         Filesystem $filesystem,
         ResourceModel $resourceModel,
-        Mime $mime = null,
+        Mime $mime,
         File $ioFile
     ) {
         $this->attributeRepository = $attributeRepository;

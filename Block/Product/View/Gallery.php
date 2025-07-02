@@ -102,10 +102,10 @@ class Gallery extends \Magento\Catalog\Block\Product\View\Gallery
      * @param Manager $moduleManager
      * @param Image $imageHelper
      * @param ScopeConfigInterface $scopeConfig
-     * @param array $data
      * @param ImagesConfigFactoryInterface|null $imagesConfigFactory
-     * @param array $galleryImagesConfig
      * @param UrlBuilder|null $urlBuilder
+     * @param array $data
+     * @param array $galleryImagesConfig
      */
     public function __construct(
         Context $context,
@@ -114,10 +114,10 @@ class Gallery extends \Magento\Catalog\Block\Product\View\Gallery
         Manager $moduleManager,
         Image $imageHelper,
         ScopeConfigInterface $scopeConfig,
+        ImagesConfigFactoryInterface $imagesConfigFactory,
+        UrlBuilder $urlBuilder,
         array $data = [],
-        ImagesConfigFactoryInterface $imagesConfigFactory = null,
-        array $galleryImagesConfig = [],
-        UrlBuilder $urlBuilder = null
+        array $galleryImagesConfig = []
     ) {
         parent::__construct($context, $arrayUtils, $jsonEncoder, $data);
         $this->jsonEncoder = $jsonEncoder;
